@@ -5,21 +5,7 @@ let total = document.querySelector("#total");
 let showallrolls = document.querySelector("#show-all-rolls");
 let allrolls = document.querySelector("#all-rolls");
 let counter = 0
-let reset = document.querySelector("#reset-button");var face0=new Image()
-
-face0.src="d1.gif"
-var face1=new Image()
-face1.src="d2.gif"
-var face2=new Image()
-face2.src="d3.gif"
-var face3=new Image()
-face3.src="d4.gif"
-var face4=new Image()
-face4.src="d5.gif"
-var face5=new Image()
-face5.src="d6.gif"
-
-
+let reset = document.querySelector("#reset-button");
 
 
 
@@ -37,9 +23,7 @@ showallrolls.addEventListener("click", function () {
     let numberRolled = dieRolls[counter2]
     const newDiceString = '<li class="dice">' + numberRolled + "</li>";
     allrolls.innerHTML += newDiceString
-    totalRolls = totalRolls + numberRolled
-    document.images["mydice"].src=eval("face"+randomdice+".src")
-
+    totalRolls = totalRolls + numberRolled  
 
   }
   total.innerHTML += " " + totalRolls
@@ -48,7 +32,7 @@ showallrolls.addEventListener("click", function () {
 
   reset.addEventListener("click", function () {
     dieRolls =[]
-    total.innerHTML=""
+    total.innerHTML = ""
     allrolls.innerHTML =""
     input.value = ""
   }) 
